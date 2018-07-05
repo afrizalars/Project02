@@ -23,6 +23,7 @@ public class Alur extends AppCompatActivity {
     RadioGroup rgKedalaman,rgKedalaman2,rgKedalaman3;
     RadioButton rbKedalaman1, rbKedalaman2, rbKedalaman3;
     String Kedalaman, Kedalaman2, Kedalaman3;
+    ////////
 
     Button expandableButton1,expandableButton2,expandableButton3 ;
 
