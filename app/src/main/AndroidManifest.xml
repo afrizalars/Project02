@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zzulf.project02">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainMenu" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginScreen" />
+        <activity android:name=".RegisterScreen" />
+        <activity android:name=".UnsurfacedRoad" />
+        <activity android:name=".InputDataJalan" />
+        <activity android:name=".Retakan1" />
+        <activity android:name=".Retakan2" />
+        <activity android:name=".Retakan3" />
+        <activity android:name=".Retakan4" />
+        <activity android:name=".Retakan5" />
+        <activity android:name=".Alur1" />
+        <activity android:name=".Alur2" />
+        <activity android:name=".Alur3" />
+        <activity android:name=".Alur4" />
+        <activity android:name=".Alur5" />
+        <activity android:name=".Tambalan1" />
+        <activity android:name=".Tambalan2" />
+        <activity android:name=".Tambalan3" />
+        <activity android:name=".Tambalan4" />
+        <activity android:name=".Tambalan5" />
+        <activity android:name=".Lubang1" />
+        <activity android:name=".Lubang2" />
+        <activity android:name=".Lubang3" />
+        <activity android:name=".Lubang4" />
+        <activity android:name=".Lubang5" />
+        <activity android:name=".KekerasanPermukaan1" />
+        <activity android:name=".KekerasanPermukaan2" />
+        <activity android:name=".KekerasanPermukaan3" />
+        <activity android:name=".KekerasanPermukaan4" />
+        <activity android:name=".KekerasanPermukaan5" />
+        <activity android:name=".Amblas1" />
+        <activity android:name=".Amblas2" />
+        <activity android:name=".Amblas3" />
+        <activity android:name=".Amblas4" />
+        <activity android:name=".Amblas5" />
+        <activity android:name=".SaluranSamping1" />
+        <activity android:name=".Penghubung" />
+        <activity android:name=".Bahu" />
+        <activity android:name=".JalurPejalanKaki" />
+        <activity android:name=".Kereb" />
+        <activity android:name=".InputDataKondisiDrainase" />
+        <activity android:name=".JalanAtauDrainase" />
+        <activity android:name=".Hasil" />
+        <activity android:name=".HasilDrainase" />
+        <activity android:name=".asaas" />
+        <activity android:name=".InputJalanURCI" />
+        <activity android:name=".URCI" />
+        <activity android:name=".HasilURCI" />
+        <activity android:name=".Alur" />
+    </application>
+
+</manifest>

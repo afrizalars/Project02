@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tambalan2">
+
+    <LinearLayout
+        android:id="@+id/linearInfoJalan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@drawable/gradient_primary_color"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvNamaJalan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Nama Jalan"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:id="@+id/tvLokasiJalan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lokasi"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:id="@+id/tvLuasJalan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luas (mm2)"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearIdRetakan"
+        android:layout_below="@+id/linearInfoJalan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambalan 2"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollRetakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearIdRetakan">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/expandableButton1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_primary_color_lbl"
+                android:paddingRight="10dp"
+                android:text="Luas"
+                android:textColor="#fff" />
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/expandableButton1"
+                android:background="@drawable/gradient_primary_color_outline"
+                android:padding="16dp"
+                app:ael_duration="400"
+                app:ael_expanded="true"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/rg_kedalaman_alur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Lebih dari 30%" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="20 - 30%" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="10 - 20%" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="kurang dari 10%" />
+
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_below="@+id/scrollRetakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center">
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/cb_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            app:cb_color="@color/colorPrimary"
+            android:src="@drawable/ic_chevron_left_white_24dp"
+            android:onClick="goHome"
+            />
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/cb_finish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            app:cb_color="#2e8318"
+            android:src="@drawable/ic_check_white_24dp"
+            android:onClick="goHome"
+            />
+        <at.markushi.ui.CircleButton
+            android:id="@+id/cb_addRetakan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            app:cb_color="@color/colorPrimary"
+            android:src="@drawable/ic_add_white_24dp"
+            />
+        <at.markushi.ui.CircleButton
+            android:id="@+id/cb_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            app:cb_color="@color/colorPrimary"
+            android:src="@drawable/ic_chevron_right_white_24dp"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

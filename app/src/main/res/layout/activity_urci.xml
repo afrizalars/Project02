@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".URCI"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/linearInfoJalan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/gradient_primary_color"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvNamaJalan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Nama Jalan"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:id="@+id/tvLokasiJalan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lokasi"
+            android:textColor="#fff"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Linearinfojalan2"
+        android:layout_below="@id/linearInfoJalan"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="FLASH"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Tim"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="#f5f5f5" />
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvLuasJalan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textStyle="bold"
+                android:textColor="#f4aa14"
+                android:textSize="15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luas (mm2)"
+                android:textStyle="bold"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#d2d2d2" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e4e4e4"
+        android:gravity="center">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:text="Kerusakan"
+            android:textColor="#494949"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="360dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Improper Cross Section (m)"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:id="@+id/et_ICS"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:hint="input disini"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/gradient_primary_color_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inadequate Roadside Drainage (m)"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:id="@+id/et_IRD"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:hint="input disini"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/gradient_primary_color_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corrugation (m2)"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:id="@+id/et_Corrugation"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:hint="input disini"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/gradient_primary_color_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dust"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:id="@+id/et_Dust"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:hint="input disini"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/gradient_primary_color_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Potholes (jumlah)"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:id="@+id/et_Pot"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:hint="input disini"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/gradient_primary_color_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruts (m)"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:id="@+id/et_Ruts"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:hint="input disini"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/gradient_primary_color_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loose Aggreggate (m2)"
+                android:textColor="@color/colorPrimary"/>
+            <EditText
+                android:id="@+id/et_Loose"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:hint="input disini"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/gradient_primary_color_outline"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_below="@+id/scrollRetakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/cb_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            app:cb_color="@color/colorPrimary"
+            android:src="@drawable/ic_chevron_left_white_24dp"
+            />
+        <at.markushi.ui.CircleButton
+            android:id="@+id/cb_finish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            app:cb_color="#2e8318"
+            android:src="@drawable/ic_check_white_24dp"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

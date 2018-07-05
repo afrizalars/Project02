@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputJalanURCI"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#e7e7e7">
+
+    <LinearLayout
+        android:id="@+id/linearTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/gradient_primary_color"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INPUT DATA"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/linearTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="13dp">
+
+        <LinearLayout
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_roundedrectanglenontransparent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Nama Jalan"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textAlignment="center"
+                />
+            <EditText
+                android:id="@+id/et_namajalan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tim Survey"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textAlignment="center"
+                />
+            <EditText
+                android:id="@+id/et_timsurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Panjang"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textAlignment="center"
+                />
+            <EditText
+                android:id="@+id/et_panjang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Lebar"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textAlignment="center"
+                />
+            <EditText
+                android:id="@+id/et_lebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/btn_input"
+            android:layout_below="@+id/data"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/add_road_white"
+            app:cb_color="@color/colorPrimaryDark"
+            app:cb_pressedRingWidth="3dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

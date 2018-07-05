@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bahu">
+
+    <LinearLayout
+        android:id="@+id/linearInfoJalan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@drawable/gradient_primary_color"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvNamaJalan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Nama Jalan"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:id="@+id/tvLokasiJalan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lokasi"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:id="@+id/tvLuasJalan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luas (mm2)"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearIdRetakan"
+        android:layout_below="@+id/linearInfoJalan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollRetakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearIdRetakan">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/expandableButton1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_primary_color_lbl"
+                android:paddingRight="10dp"
+                android:text="Bahu"
+                android:textColor="#fff" />
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/expandableButton1"
+                android:background="@drawable/gradient_primary_color_outline"
+                android:padding="16dp"
+                app:ael_duration="400"
+                app:ael_expanded="true"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/chb_opt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terlalu Tinggi"/>
+                    <CheckBox
+                        android:id="@+id/chb_opt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sama Tinggi"/>
+                    <CheckBox
+                        android:id="@+id/chb_opt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terlalu Rendah"/>
+                    <CheckBox
+                        android:id="@+id/chb_opt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Miring"/>
+                    <CheckBox
+                        android:id="@+id/chb_opt5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak rata"/>
+                    <CheckBox
+                        android:id="@+id/chb_opt6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diperkeras"/>
+                    <CheckBox
+                        android:id="@+id/chb_opt7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak diperkeras"/>
+
+                </LinearLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnUpdate3"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:textSize="12dp"
+                    android:text="Update"
+                    android:layout_marginRight="0dp"
+                    android:background="@drawable/background_rounded_left_down"/>
+                <Button
+                    android:id="@+id/btnDelete3"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:textSize="12dp"
+                    android:text="Delete"
+                    android:background="@drawable/background_rounded_right_down"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_below="@+id/scrollRetakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/cb_finish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            app:cb_color="#2e8318"
+            android:src="@drawable/ic_check_white_24dp"
+            android:onClick="goHome"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
